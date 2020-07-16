@@ -21,6 +21,7 @@ class ImportTransactionsService {
 
     const parsers = csvParse({
       from_line: 2,
+      relax_column_count: true,
     });
 
     const parseCSV = contactsReadStream.pipe(parsers);
